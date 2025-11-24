@@ -1,0 +1,168 @@
+name: Update File Test
+
+on:
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  update-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检查存储库
+        uses: actions/checkout@v4
+
+      - name: 创建分类文件夹并下载配置
+        run: |
+          # ==========================================
+          # 1. 官方示例 (Official_Examples)
+          # ==========================================
+          
+          # --- Metacubex ---
+          mkdir -p "Official_Examples/Metacubex"
+          curl -s -o "Official_Examples/Metacubex/rule-set_config.yaml" \
+            "https://wiki.metacubex.one/example/mrs"
+          curl -s -o "Official_Examples/Metacubex/geox_config.yaml" \
+            "https://wiki.metacubex.one/example/geox"
+
+
+          # ==========================================
+          # 2. 通用配置 (General_Config)
+          # ==========================================
+
+          # --- Yiteei ---
+          mkdir -p "General_Config/Yiteei"
+          curl -s -o "General_Config/Yiteei/redir-host_config.yaml" \
+            "https://raw.githubusercontent.com/yiteei/Share/refs/heads/Proxy/config/redir-host.yaml"
+          curl -s -o "General_Config/Yiteei/fake-ip_config.yaml" \
+            "https://raw.githubusercontent.com/yiteei/Share/refs/heads/Proxy/config/fake-ip.yaml"
+
+          # --- JohnsonRan ---
+          mkdir -p "General_Config/JohnsonRan"
+          curl -s -o "General_Config/JohnsonRan/AIB.yaml" \
+            "https://raw.githubusercontent.com/JohnsonRan/CRules/refs/heads/master/config/AIB.yaml"
+          curl -s -o "General_Config/JohnsonRan/AIO.yaml" \
+            "https://raw.githubusercontent.com/JohnsonRan/CRules/refs/heads/master/config/AIO.yaml"
+          
+          # --- 666OS (MihomoPro & OneTouch) ---
+          mkdir -p "General_Config/666OS"
+          curl -s -o "General_Config/666OS/MihomoPro_Config.yaml" \
+            "https://raw.githubusercontent.com/666OS/YYDS/main/mihomo/config/MihomoPro.yaml"
+          # [修正] OneTouch 移动至通用配置
+          curl -s -o "General_Config/666OS/OneTouch_Config.yaml" \
+            "https://raw.githubusercontent.com/666OS/YYDS/main/mihomo/config/OneTouch.yaml"
+
+          # --- HenryChiao (General) ---
+          mkdir -p "General_Config/HenryChiao"
+          curl -s -o "General_Config/HenryChiao/MihomoAIO.yaml" \
+            "https://github.com/HenryChiao/MIHOMO_AIO/blob/main/CONFIG/General/MihomoAIO.yaml?raw=true"
+          curl -s -o "General_Config/HenryChiao/MihomoProMax.yaml" \
+            "https://github.com/HenryChiao/MIHOMO_AIO/blob/main/CONFIG/General/MihomoProMax.yaml?raw=true"
+          curl -s -o "General_Config/HenryChiao/MihomoProPlus.yaml" \
+            "https://github.com/HenryChiao/MIHOMO_AIO/blob/main/CONFIG/General/MihomoProPlus.yaml?raw=true"
+
+          # --- yyhhyyyyyy (SelfProxy) ---
+          mkdir -p "General_Config/yyhhyyyyyy"
+          curl -s -o "General_Config/yyhhyyyyyy/mihomo_single.yaml" \
+            "https://github.com/yyhhyyyyyy/selfproxy/blob/main/Mihomo/mihomo_single.yaml?raw=true"
+          curl -s -o "General_Config/yyhhyyyyyy/mihomo_multi.yaml" \
+            "https://github.com/yyhhyyyyyy/selfproxy/blob/main/Mihomo/mihomo_multi.yaml?raw=true"
+
+          # --- liandu2024 (General/Fallback) ---
+          mkdir -p "General_Config/liandu2024"
+          curl -s -o "General_Config/liandu2024/clash-fallback.yaml" \
+            "https://github.com/liandu2024/little/blob/main/yaml/clash-fallback.yaml?raw=true"
+          curl -s -o "General_Config/liandu2024/clash-fallback-std.yaml" \
+            "https://github.com/liandu2024/little/blob/main/yaml/clash-fallback-std.yaml?raw=true"
+          curl -s -o "General_Config/liandu2024/clash-fallback-dialer.yaml" \
+            "https://github.com/liandu2024/little/blob/main/yaml/clash-fallback-dialer.yaml?raw=true"
+          curl -s -o "General_Config/liandu2024/clash-fallback-all.yaml" \
+            "https://github.com/liandu2024/little/blob/main/yaml/clash-fallback-all.yaml?raw=true"
+          curl -s -o "General_Config/liandu2024/clash-all-fallback.yaml" \
+            "https://github.com/liandu2024/little/blob/main/yaml/clash-all-fallback.yaml?raw=true"
+
+          # --- echs-top (General) ---
+          mkdir -p "General_Config/echs-top"
+          curl -s -o "General_Config/echs-top/mihomo.yaml" \
+            "https://raw.githubusercontent.com/echs-top/proxy/heads/main/mihomo.yaml"
+
+          # --- qichiyuhub (General) ---
+          mkdir -p "General_Config/qichiyuhub"
+          curl -s -o "General_Config/qichiyuhub/config.yaml" \
+            "https://github.com/qichiyuhub/rule/blob/main/config/mihomo/config.yaml?raw=true"
+
+          # --- iKeLee ---
+          mkdir -p "General_Config/iKeLee"
+          curl -s -o "General_Config/iKeLee/Clash_Sample.yaml" \
+            "https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/Tool/Clash/Config/Clash_Sample_Configuration_By_iKeLee.yaml"
+
+
+          # ==========================================
+          # 3. Smart模式 (Smart_Mode)
+          # ==========================================
+
+          # --- 666OS (Smart系列) ---
+          mkdir -p "Smart_Mode/666OS"
+          curl -s -o "Smart_Mode/666OS/OneSmart_Config.yaml" \
+            "https://raw.githubusercontent.com/666OS/YYDS/main/mihomo/config/OneSmartPro.yaml"
+          curl -s -o "Smart_Mode/666OS/OneSmart_Lite_Config.yaml" \
+            "https://raw.githubusercontent.com/666OS/YYDS/main/mihomo/config/OneSmart.yaml"
+
+          # --- HenryChiao (Smart) ---
+          mkdir -p "Smart_Mode/HenryChiao"
+          curl -s -o "Smart_Mode/HenryChiao/MihomoSmartProPlus.yaml" \
+            "https://raw.githubusercontent.com/HenryChiao/MIHOMO_AIO/refs/heads/main/CONFIG/SMART/MihomoSmartProPlus.yaml"
+          curl -s -o "Smart_Mode/HenryChiao/MihomoSmartAIO.yaml" \
+            "https://github.com/HenryChiao/MIHOMO_AIO/blob/main/CONFIG/SMART/MihomoSmartAIO.yaml?raw=true"
+          curl -s -o "Smart_Mode/HenryChiao/MihomoSmartProMax.yaml" \
+            "https://github.com/HenryChiao/MIHOMO_AIO/blob/main/CONFIG/SMART/MihomoSmartProMax.yaml?raw=true"
+
+          # --- liandu2024 (Smart) ---
+          mkdir -p "Smart_Mode/liandu2024"
+          curl -s -o "Smart_Mode/liandu2024/clash-fallback-smart-std.yaml" \
+            "https://github.com/liandu2024/little/blob/main/yaml/clash-fallback-smart-std.yaml?raw=true"
+          curl -s -o "Smart_Mode/liandu2024/clash-all-smart.yaml" \
+            "https://github.com/liandu2024/little/blob/main/yaml/clash-all-smart.yaml?raw=true"
+          curl -s -o "Smart_Mode/liandu2024/clash-all-fallback-smart.yaml" \
+            "https://github.com/liandu2024/little/blob/main/yaml/clash-all-fallback-smart.yaml?raw=true"
+
+          # --- echs-top (Smart) ---
+          mkdir -p "Smart_Mode/echs-top"
+          curl -s -o "Smart_Mode/echs-top/mihomo_smart.yaml" \
+            "https://raw.githubusercontent.com/echs-top/proxy/heads/main/mihomo_smart.yaml"
+
+          # --- qichiyuhub (Smart) ---
+          mkdir -p "Smart_Mode/qichiyuhub"
+          curl -s -o "Smart_Mode/qichiyuhub/smart.yaml" \
+            "https://github.com/qichiyuhub/rule/blob/main/config/mihomo/AI/smart.yaml?raw=true"
+
+
+          # ==========================================
+          # 4. 手机模块 (Mobile_Modules)
+          # ==========================================
+
+          # --- Surfing ---
+          mkdir -p "Mobile_Modules/Surfing"
+          curl -s -o "Mobile_Modules/Surfing/config.yaml" \
+            "https://raw.githubusercontent.com/GitMetaio/Surfing/refs/heads/main/box_bll/clash/config.yaml"
+
+          # --- AkashaProxy ---
+          mkdir -p "Mobile_Modules/AkashaProxy"
+          curl -s -o "Mobile_Modules/AkashaProxy/config.yaml" \
+            "https://raw.githubusercontent.com/akashaProxy/akashaProxy/refs/heads/master/module/clash/config.yaml.example"
+
+          # --- ClashMix ---
+          mkdir -p "Mobile_Modules/ClashMix"
+          curl -s -o "Mobile_Modules/ClashMix/config.yaml" \
+            "https://raw.githubusercontent.com/AXEVO/Clash-MIX/refs/heads/Clash-MIX-4.0/Clash/Clash%E9%85%8D%E7%BD%AE.yaml"
+
+          # --- BoxProxy ---
+          mkdir -p "Mobile_Modules/BoxProxy"
+          curl -s -o "Mobile_Modules/BoxProxy/config.yaml" \
+            "https://raw.githubusercontent.com/boxproxy/box/refs/heads/master/box/mihomo/config.yaml"
+
+      - name: 提交并推送更改
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Update: Add new authors & reclassify 666OS/OneTouch to General" || echo "No changes to commit"
+          git push
