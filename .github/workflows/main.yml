@@ -101,6 +101,11 @@ jobs:
           curl -s -o "General_Config/iKeLee/Clash_Sample.yaml" \
             "https://raw.githubusercontent.com/luestr/ProxyResource/main/Tool/Clash/Config/Clash_Sample_Config_By_iKeLee.yaml"
 
+          # --- Fᴜғᴜ ---
+          mkdir -p "General_Config/fufu"
+          curl -s -o "General_Config/fufu/ConfigForClash.yaml" \
+            "https://raw.githubusercontent.com/sunfing/iNg/refs/heads/main/Config/ConfigForClash"
+
 
           # ==========================================
           # 3. Smart模式 (Smart_Mode)
