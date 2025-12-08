@@ -8,6 +8,6 @@
 
 | 文件名 (Filename) | 大小 (Size) | 在线查看 (Link) |
 | :--- | :--- | :--- |
-| **MihomoAIO.yaml** | 30.7 KB | [查看配置](https://github.com/HenryChiao/mihomo_yamls/blob/main/General_Config/HenryChiao/MihomoAIO.yaml) |
-| **MihomoProMax.yaml** | 28.1 KB | [查看配置](https://github.com/HenryChiao/mihomo_yamls/blob/main/General_Config/HenryChiao/MihomoProMax.yaml) |
-| **MihomoProPlus.yaml** | 28.5 KB | [查看配置](https://github.com/HenryChiao/mihomo_yamls/blob/main/General_Config/HenryChiao/MihomoProPlus.yaml) |
+| **MihomoAIO.yaml** | 30.1 KB | [查看配置](https://github.com/HenryChiao/mihomo_yamls/blob/main/General_Config/HenryChiao/MihomoAIO.yaml) |
+| **MihomoProMax.yaml** | 27.4 KB | [查看配置](https://github.com/HenryChiao/mihomo_yamls/blob/main/General_Config/HenryChiao/MihomoProMax.yaml) |
+| **MihomoProPlus.yaml** | 27.9 KB | [查看配置](https://github.com/HenryChiao/mihomo_yamls/blob/main/General_Config/HenryChiao/MihomoProPlus.yaml) |
