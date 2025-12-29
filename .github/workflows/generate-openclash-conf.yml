@@ -2,10 +2,10 @@ name: Generate OpenClash Conf
 
 on:
   workflow_dispatch: # 允许手动触发
-  workflow_run:      # 监听 "Update File Test" 完成后触发
-    workflows: ["Update File Test"]
-    types:
-      - completed
+  # workflow_run:      # 监听 "Update File Test" 完成后触发
+  #  workflows: ["Update File Test"]
+  #  types:
+  #    - completed
 
 permissions:
   contents: write
