@@ -7,7 +7,7 @@
 ## 📄 配置文件详解 (Details)
 
 ### 📝 config.yaml
-- **大小**: 27.6 KB
+- **大小**: 27.5 KB
 - **链接**: [查看源码](https://github.com/HenryChiao/mihomo_yamls/blob/main/General_Config/wanswu/config.yaml)
 
 #### 📶 网络端口配置 (Ports)
@@ -58,4 +58,4 @@
 
 | 文件名 | 大小 | 链接 |
 | :--- | :--- | :--- |
-| `config.yaml` | 27.6 KB | [查看](https://github.com/HenryChiao/mihomo_yamls/blob/main/General_Config/wanswu/config.yaml) |
+| `config.yaml` | 27.5 KB | [查看](https://github.com/HenryChiao/mihomo_yamls/blob/main/General_Config/wanswu/config.yaml) |
