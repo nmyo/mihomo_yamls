@@ -20,7 +20,7 @@
 | 项目 / 维护者 | 说明 | 链接 |
 | :--- | :--- | :---: |
 | **MetaCubeX** | Mihomo (Clash Meta) 官方 Geo 数据库 | [GitHub](https://github.com/MetaCubeX/meta-rules-dat/tree/meta/geo) |
-| **DustinWin** | 专为 Mihomo 优化的规则集与 Geo 数据 | [GitHub](https://github.com/DustinWin/ruleset_geodata/releases/tag/mihomo-ruleset) |
+| **DustinWin** | 专为 Mihomo 优化的规则集与 Geo 数据 | [GitHub](https://github.com/DustinWin/ruleset_geodata) |
 | **NobyDa** | 经典的 GeoIP 数据库 | [GitHub](https://github.com/NobyDa/geoip) |
 | **Metowolf** | 中国大陆 IP 列表 | [GitHub](https://github.com/metowolf/iplist) |
 | **Ispip.clang.cn** | 运营商级 IP 数据 | [Website](https://ispip.clang.cn/) |
@@ -33,6 +33,7 @@
 
 | 项目 / 维护者 | 说明 | 链接 |
 | :--- | :--- | :---: |
+| **DustinWin** | 专为 Mihomo 优化的规则集与 Geo 数据 | [GitHub](https://github.com/DustinWin/ruleset_geodata/releases/tag/mihomo-ruleset) |
 | **blackmatrix7** | iOS/Clash 圈最权威的规则库之一，覆盖极全 | [GitHub](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash) |
 | **Loyalsoldier** | 广受好评的 V2Ray/Clash 规则集 | [GitHub](https://github.com/Loyalsoldier/clash-rules) |
 | **dler-io** | 专业的规则维护项目 | [GitHub](https://github.com/dler-io/Rules/) |
