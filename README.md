@@ -11,7 +11,7 @@
 [![Issues](https://img.shields.io/github/issues/HenryChiao/mihomo_yamls?style=flat-square&logo=github&color=0969da)](https://github.com/HenryChiao/mihomo_yamls/issues)
 [![License](https://img.shields.io/github/license/HenryChiao/mihomo_yamls?style=flat-square&color=546e7a)](./LICENSE)
 
-[📖 开始使用](./THE_REAL_README.md) &nbsp;|&nbsp; [⬇️ 客户端下载](./CLIENTS.md) &nbsp;|&nbsp; [💐 致谢名单](./CREDITS.md) &nbsp;|&nbsp; [💬 反馈问题](https://github.com/HenryChiao/mihomo_yamls/issues)
+[📖 开始使用](./THEDOC/THE_REAL_README.md) &nbsp;|&nbsp; [⬇️ 客户端下载](./THEDOC/CLIENTS.md) &nbsp;|&nbsp; [💐 致谢名单](./THEDOC/CREDITS.md) &nbsp;|&nbsp; [💬 反馈问题](https://github.com/HenryChiao/mihomo_yamls/issues)
 
 </div>
 
@@ -21,7 +21,7 @@
 
 - **每日更新**：自动化脚本每日抓取，确保配置与规则保持最新。
 - **严格分类**：拒绝杂乱，提供清晰的分类逻辑，满足不同场景需求。
-- **透明来源**：[数据源自开源社区](./CREDITS.md)，整合优质资源，纯净无后门。
+- **透明来源**：[数据源自开源社区](./THEDOC/CREDITS.md)，整合优质资源，纯净无后门。
 - **开箱即用**：专为新手优化，无需复杂配置，导入即可畅享流畅体验。
 
 ---
@@ -33,28 +33,28 @@
         <td width="25%" align="center">
             <h3>📖 使用文档</h3>
             <p>从下载到进阶的全方位指南</p>
-            <a href="./THE_REAL_README.md">
+            <a href="./THEDOC/THE_REAL_README.md">
                 <img src="https://img.shields.io/badge/配置分类-Categories-blue?style=for-the-badge&logo=readthedocs" alt="Docs">
             </a>
         </td>
         <td width="25%" align="center">
             <h3>⬇️ 客户端清单</h3>
             <p>全平台 Mihomo/Meta 客户端汇总</p>
-            <a href="./CLIENTS.md">
+            <a href="./THEDOC/CLIENTS.md">
                 <img src="https://img.shields.io/badge/下载软件-Clients-2ea44f?style=for-the-badge&logo=android" alt="Clients">
             </a>
         </td>
         <td width="25%" align="center">
             <h3>🛠️ 规则集说明</h3>
             <p>深入了解分流机制与自定义</p>
-            <a href="./RULESET_README.md">
+            <a href="./THEDOC/RULESET_README.md">
                 <img src="https://img.shields.io/badge/规则说明-RuleSets-orange?style=for-the-badge&logo=adblock" alt="Rules">
             </a>
         </td>
          <td width="25%" align="center">
             <h3>💐 致谢与来源</h3>
             <p>感谢上游开源项目的贡献</p>
-            <a href="./CREDITS.md">
+            <a href="./THEDOC/CREDITS.md">
                 <img src="https://img.shields.io/badge/致谢名单-Credits-pink?style=for-the-badge&logo=github" alt="Credits">
             </a>
         </td>
@@ -103,3 +103,5 @@
 **如果这个项目对您有帮助，请点亮右上角的 ⭐ Star 支持一下！**
 
 </div>
+<!-- AUTO_GENERATED_START -->
+<!-- AUTO_GENERATED_END -->

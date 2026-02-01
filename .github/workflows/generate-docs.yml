@@ -1,0 +1,58 @@
+name: Generate Documentation
+
+on:
+  workflow_run:
+    workflows: ["Update Configs"]
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      # 运行脚本 1：生成各分类文件夹的 README
+      - name: Generate Category READMEs
+        run: python3 .github/scripts/gen_category_docs.py
+
+      # 运行脚本 2：生成 OpenClash 配置和 INI 文档
+      - name: Generate OpenClash & INI Configs
+        run: python3 .github/scripts/gen_openclash.py
+
+      # 提交更改 (仅涉及 THEYAMLS 和 Overwrite 文件夹)
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # 只添加这两个相关目录，确保不碰根目录 README
+          git add THEYAMLS/ Overwrite/
+          
+          if git diff --staged --quiet; then
+            echo "✅ No changes detected."
+            exit 0
+          fi
+          
+          git commit -m "🤖 Auto: Update sub-folder docs & configs"
+          
+          # 拉取最新代码防止冲突，然后推送
+          git pull origin ${{ github.ref_name }} --rebase
+          git push origin HEAD:${{ github.ref_name }}
